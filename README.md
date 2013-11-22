@@ -31,6 +31,7 @@ if __name__ == '__main__':
 
 </pre>
 
+<pre>
 output
 ------
 - a
@@ -42,4 +43,4 @@ output
 + d
   d
   e
-
+</pre>
