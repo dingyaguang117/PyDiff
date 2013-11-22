@@ -54,8 +54,8 @@ def calc(a,b,dp):
 def diff(a,b):
     lines1 = [None] + a.split('\n')
     lines2 = [None] + b.split('\n')
-    print lines1
-    print lines2
+    #print lines1
+    #print lines2
     dp = [[node() for i in xrange(len(lines2))] for j in xrange(len(lines1))]
     #__printDp(dp)
 
@@ -84,14 +84,7 @@ def diff(a,b):
                 dp[i][j].pre_i = i-1
                 dp[i][j].pre_j = j
 
-    __printDp(dp)
-
+    #__printDp(dp)
     result = calc(lines1,lines2,dp)
-    for one in result:
-        if one.status == -1:
-            print '-',one.val
-        elif one.status == 1:
-            print '+',one.val
-        else:
-            print ' ',one.val
+    return result
 

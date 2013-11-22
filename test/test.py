@@ -1,13 +1,8 @@
 __author__ = 'ding'
-
-
 import sys,os
 sys.path += [os.path.join(os.path.dirname(__file__),'../src')]
 
-print sys.path
 import pydiff
-
-
 
 a = '''a
 a
@@ -24,13 +19,15 @@ d
 d
 e'''
 
-a = 'a\na'
-b = 'b\nb'
-
-
 def main():
-    print pydiff.diff(a,b)
-
+    result =  pydiff.diff(a,b)
+    for one in result:
+        if one.status == -1:
+            print '-',one.val
+        elif one.status == 1:
+            print '+',one.val
+        else:
+            print ' ',one.val
 
 if __name__ == '__main__':
     main()
