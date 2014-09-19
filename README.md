@@ -6,10 +6,6 @@ A library to diff two files, output is unified format
 example:
 
 <pre>
-__author__ = 'ding'
-import sys,os
-sys.path += [os.path.join(os.path.dirname(__file__),'../src')]
-
 import pydiff
 
 a = '''a
